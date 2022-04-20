@@ -1,0 +1,13 @@
+
+.header {
+  width: 100%;
+  position: absolute;
+  padding: 32px 0 26px;
+
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
