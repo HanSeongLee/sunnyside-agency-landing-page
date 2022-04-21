@@ -1,0 +1,33 @@
+
+.heroSection {
+  width: 100%;
+  height: 538px;
+  background: url("/img/mobile/image-header.jpg") no-repeat;
+  background-size: cover;
+  padding-top: 144px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 52px;
+  }
+
+  .title {
+    font-family: 'Fraunces';
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+    letter-spacing: 6.25px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  .arrowDownIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
