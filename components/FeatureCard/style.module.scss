@@ -1,0 +1,49 @@
+
+.featureCard {
+  text-align: center;
+  padding: 64px 0;
+
+  .title {
+    font-family: 'Fraunces';
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: -0.29px;
+    color: #24303E;
+    margin-bottom: 24px;
+  }
+
+  .description {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.13px;
+    color: #808397;
+    margin-bottom: 32px;
+  }
+
+  .link {
+    position: relative;
+    font-family: 'Fraunces';
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #24303E;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -8px;
+      width: 100%;
+      height: 100%;
+      min-width: 137px;
+      background: #FAD400;
+      opacity: 0.25;
+      border-radius: 28px;
+      content: "";
+      transform: translateY(50%);
+    }
+  }
+}
