@@ -24,26 +24,31 @@
 
   .link {
     position: relative;
-    font-family: 'Fraunces';
-    font-weight: 900;
-    font-size: 15px;
-    line-height: 25px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #24303E;
+    padding: 0 9px 0 8px;
+
+    span {
+      position: relative;
+      font-family: 'Fraunces';
+      font-weight: 900;
+      font-size: 15px;
+      line-height: 25px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #24303E;
+    }
 
     &::before {
       position: absolute;
       top: 0;
-      left: -8px;
+      left: 0;
       width: 100%;
-      height: 100%;
+      height: 10px;
       min-width: 137px;
-      background: #FAD400;
+      background: var(--color);
       opacity: 0.25;
       border-radius: 28px;
       content: "";
-      transform: translateY(50%);
+      transform: translateY(150%);
     }
   }
 }

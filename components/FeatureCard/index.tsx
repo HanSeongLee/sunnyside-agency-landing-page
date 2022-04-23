@@ -1,17 +1,31 @@
-import React from 'react';
+import React, {CSSProperties, HTMLAttributes} from 'react';
 import styles from './style.module.scss';
 
-const FeatureCard: React.FC = () => {
+interface IProps extends HTMLAttributes<HTMLDivElement> {
+    title: string;
+    description: string;
+    href: string;
+    color: string;
+};
+
+const FeatureCard: React.FC<IProps> = ({ title, description, href, color }) => {
     return (
         <div className={styles.featureCard}>
             <h2 className={styles.title}>
-                Transform your brand
+                {title}
             </h2>
             <p className={styles.description}>
-                We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.
+                {description}
             </p>
-            <a className={styles.link}>
-                Learn More
+            <a className={styles.link}
+               href={href}
+               style={{
+                   '--color': color,
+               } as CSSProperties}
+            >
+                <span>
+                    Learn More
+                </span>
             </a>
         </div>
     );
