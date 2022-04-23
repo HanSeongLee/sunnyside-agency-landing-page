@@ -1,0 +1,43 @@
+
+.testimonialCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 32px;
+  text-align: center;
+
+  .avatar {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .description {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.13px;
+    color: #5B636D;
+  }
+
+  .name {
+    font-family: 'Fraunces';
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.13px;
+    color: #24303E;
+    margin-bottom: 9px;
+  }
+
+  .affiliation {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: -0.1px;
+    color: #A7AAAD;
+  }
+}
