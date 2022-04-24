@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .nav {
   &.open {
@@ -8,6 +9,10 @@
     .menuBoxWrapper {
       max-height: 9999px;
       transition: all 1s ease-in-out;
+
+      @include media(">desktop") {
+        transition: none;
+      }
     }
   }
 
@@ -17,6 +22,10 @@
     border: none;
     cursor: pointer;
     transition: opacity 0.3s;
+
+    @include media(">desktop") {
+      display: none;
+    }
   }
 
   .menuBoxWrapper {
@@ -27,6 +36,15 @@
     overflow: hidden;
     max-height: 0;
     transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+
+    @include media(">desktop") {
+      position: relative;
+      top: initial;
+      left: initial;
+      width: 100%;
+      max-height: initial;
+      transition: none;
+    }
   }
 
   .menuBox {
@@ -39,6 +57,14 @@
     padding: 39px 0;
     margin-top: 24px;
 
+    @include media(">desktop") {
+      flex-direction: row;
+      grid-gap: 47px;
+      background: transparent;
+      padding: 0;
+      margin-top: 0;
+    }
+
     &::before {
       position: absolute;
       top: -24px;
@@ -46,6 +72,10 @@
       border-bottom: 24px solid #FFFCF8;
       border-left: 24px solid transparent;
       content: "";
+
+      @include media(">desktop") {
+        display: none;
+      }
     }
 
     .siteMenuContainer {
@@ -58,6 +88,15 @@
       line-height: 25px;
       letter-spacing: -0.14px;
       color: #808397;
+
+      @include media(">desktop") {
+        flex-direction: row;
+        grid-gap: 47px;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: -0.13px;
+        color: #FFFFFF;
+      }
     }
   }
 
@@ -74,5 +113,17 @@
     background: #FBD600;
     border: none;
     border-radius: 28px;
+    cursor: pointer;
+
+    @include media(">desktop") {
+      color: #24303E;
+      background: #FFFFFF;
+      transition: color 0.3s, background 0.3s;
+
+      &:hover {
+        color: #FFFFFF;
+        background: rgba(255, 255, 255, 0.25);
+      }
+    }
   }
 }

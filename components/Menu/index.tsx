@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import styles from './style.module.scss';
 import cn from 'classnames';
 import SiteMenuContainer from '../../containers/SiteMenuContainer';
@@ -9,6 +9,20 @@ const Menu: React.FC = () => {
     const onMenuToggle = useCallback(() => {
         setOpen(!open);
     }, [open]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 992) {
+                setOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    }, []);
 
     return (
         <nav className={cn(styles.nav, {
