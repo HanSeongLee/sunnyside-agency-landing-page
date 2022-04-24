@@ -17,6 +17,11 @@
 
     @include media(">desktop") {
       max-width: 1352px;
+      padding: 0 40px;
+    }
+
+    @include media(">1439px") {
+      padding: 0;
     }
   }
 }
