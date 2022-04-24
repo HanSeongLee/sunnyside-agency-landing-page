@@ -1,13 +1,14 @@
 
 .photoCard {
   position: relative;
-  display: flex;
 
   img {
+    display: flex;
     width: 100%;
   }
 
   .container {
+    width: 100%;
     position: absolute;
     bottom: 59px;
     left: 0;
@@ -20,6 +21,7 @@
   }
 
   .title {
+    max-width: 339px;
     font-family: 'Fraunces';
     font-style: normal;
     font-weight: 900;
@@ -29,6 +31,7 @@
   }
 
   .description {
+    max-width: 339px;
     font-weight: 600;
     font-size: 16px;
     line-height: 27px;

@@ -2,9 +2,10 @@ import React, {CSSProperties, HTMLAttributes} from 'react';
 import styles from './style.module.scss';
 import Container from '../Container';
 import cn from 'classnames';
+import Picture from '../Picture';
 
 interface IProps extends HTMLAttributes<HTMLDivElement> {
-    src: string;
+    src: {mobile: string, desktop: string};
     title: string;
     description: string;
     color: string;
@@ -21,8 +22,8 @@ const PhotoCard: React.FC<IProps> = ({
              } as CSSProperties}
              {...props}
         >
-            <img src={src}
-                 alt={''}
+            <Picture mobile={src.mobile}
+                     desktop={src.desktop}
             />
 
             <Container className={styles.container}>
