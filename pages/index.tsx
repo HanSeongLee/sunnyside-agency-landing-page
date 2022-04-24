@@ -1,5 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head';
+import HeroSection from '../components/HeroSection';
+import Header from '../components/Header';
+import IntroSection from '../components/IntroSection';
+import TestimonialSection from '../components/TestimonialSection';
+import Gallery from '../components/Gallery';
+import Footer from '../components/Footer';
 
 const Home: NextPage = () => {
   return (
@@ -54,6 +60,12 @@ const Home: NextPage = () => {
         </Head>
 
         <main>
+          <Header />
+          <HeroSection />
+          <IntroSection />
+          <TestimonialSection />
+          <Gallery />
+          <Footer />
         </main>
       </>
   );
