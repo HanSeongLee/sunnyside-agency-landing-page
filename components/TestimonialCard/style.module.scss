@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .testimonialCard {
   display: flex;
@@ -7,19 +8,32 @@
   grid-gap: 32px;
   text-align: center;
 
+  @include media(">desktop") {
+    grid-gap: 0;
+  }
+
   .avatar {
     width: 72px;
     height: 72px;
     object-fit: cover;
     border-radius: 50%;
+
+    @include media(">desktop") {
+      margin-bottom: 59px;
+    }
   }
 
   .description {
+    max-width: 350px;
     font-weight: 600;
     font-size: 18px;
     line-height: 32px;
     letter-spacing: -0.13px;
     color: #5B636D;
+
+    @include media(">desktop") {
+      margin-bottom: 69px;
+    }
   }
 
   .name {
