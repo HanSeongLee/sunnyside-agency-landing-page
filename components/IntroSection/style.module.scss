@@ -1,7 +1,48 @@
+@import "styles/utils";
 
 .introSection {
-
   img {
     width: 100%;
+  }
+
+  .featureContainer {
+    position: relative;
+    text-align: center;
+
+    @include media(">desktop") {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .imageWrapper {
+      flex: 1;
+      img {
+        display: flex;
+        width: 100%;
+      }
+    }
+
+    .featureCardContainer {
+      width: 100%;
+      flex: 1;
+
+      > div {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .photoCardContainer {
+    @include media(">desktop") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
