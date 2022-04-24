@@ -1,7 +1,12 @@
+@import "styles/utils";
 
 .footer {
   background: #90D4C6;
   padding: 64px 0 80px;
+
+  @include media(">desktop") {
+    padding: 72px 0;
+  }
 
   .container {
     display: flex;
@@ -32,11 +37,37 @@
     letter-spacing: -0.13px;
     color: #458D7E;
     margin-bottom: 88px;
+
+    li a {
+      @include media(">desktop") {
+        transition: color 0.3s;
+
+        &:hover {
+          color: #FFFFFF;
+        }
+      }
+    }
   }
 
   .socialContainer {
     display: flex;
     align-items: center;
     grid-gap: 28px;
+
+    li a {
+      @include media(">desktop") {
+        svg path {
+          transition: fill 0.3s;
+        }
+
+        &:hover {
+          svg path {
+            fill: #FFFFFF;
+          }
+        }
+      }
+
+
+    }
   }
 }
